@@ -1,0 +1,7 @@
+E:\SEA BATTLE С#\Sea battle\TestConsoleApp\bin\Debug\TestConsoleApp.exe.config
+E:\SEA BATTLE С#\Sea battle\TestConsoleApp\bin\Debug\TestConsoleApp.exe
+E:\SEA BATTLE С#\Sea battle\TestConsoleApp\bin\Debug\TestConsoleApp.pdb
+E:\SEA BATTLE С#\Sea battle\TestConsoleApp\obj\Debug\TestConsoleApp.csprojAssemblyReference.cache
+E:\SEA BATTLE С#\Sea battle\TestConsoleApp\obj\Debug\TestConsoleApp.csproj.CoreCompileInputs.cache
+E:\SEA BATTLE С#\Sea battle\TestConsoleApp\obj\Debug\TestConsoleApp.exe
+E:\SEA BATTLE С#\Sea battle\TestConsoleApp\obj\Debug\TestConsoleApp.pdb

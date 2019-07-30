@@ -1,0 +1,19 @@
+﻿<Window x:Class="MainForm.StartWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MainForm"
+        mc:Ignorable="d"
+        Title="МЕНЮ" Height="326" Width="274" WindowStartupLocation="CenterScreen" Icon="Icons/WindowIcon.png">
+    <Window.Background>
+        <ImageBrush ImageSource="Icons/BackForStartWindow.jpg"/>
+    </Window.Background>
+    <Grid Margin="0,4,2,0">
+        <Button x:Name="Button_StartGame" Content="ИГРАТЬ" HorizontalAlignment="Left" Margin="65,24,0,0" VerticalAlignment="Top" Width="150" Height="48" Click="Button_StartGame_Click" Background="#FFC6D8FF"/>
+        <Button x:Name="Button_" Content="ПРАВИЛА ИГРЫ" HorizontalAlignment="Left" Margin="65,88,0,0" VerticalAlignment="Top" Width="150" Height="48" Click="Button__Click" Background="#FFC6D8FF"/>
+        <Button x:Name="button_Copy" Content="ВЫЙТИ ИЗ ИГРЫ" HorizontalAlignment="Left" Margin="65,206,0,0" VerticalAlignment="Top" Width="150" Height="48" Click="Button_Copy_Click" Background="#FFC6D8FF"/>
+        <Button x:Name="Button_StartGame_Copy" Content="О ПРОГРАММЕ" HorizontalAlignment="Left" Margin="65,147,0,0" VerticalAlignment="Top" Width="150" Height="48"  Background="#FFC6D8FF" Click="Button_StartGame_Copy_Click"/>
+
+    </Grid>
+</Window>

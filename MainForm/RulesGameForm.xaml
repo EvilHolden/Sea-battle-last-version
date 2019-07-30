@@ -1,0 +1,31 @@
+﻿<Window x:Name="GameRulesForm1" x:Class="MainForm.GameRulesForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MainForm"
+        mc:Ignorable="d"
+        Title="Правила игры" Height="517" Width="524" WindowStartupLocation="CenterScreen" FontSize="18" Icon="Остальное ненужное/GameRules.png"  >
+    <Window.Background>
+        <ImageBrush/>
+    </Window.Background>
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="0,0,1,-4" Background="White">
+            <TextBlock HorizontalAlignment="Center" Foreground="Blue" Text="Расстановка кораблей."/>
+            <TextBlock TextWrapping="Wrap" Foreground="#FF5B2222" ><Run Text="    На левом квадрате стоять ваши корабли, а справа вашего противника"/><LineBreak/><Run/></TextBlock>
+            <TextBlock  HorizontalAlignment="Center" Foreground="Blue" Text="Атака кораблей противника."/>
+            <TextBlock TextWrapping="Wrap" Text="    1.Нажать на ячейку на таблице противника(справа), которая не была до этого времени атакована." Foreground="#FF5B2222" />
+            <TextBlock TextWrapping="Wrap" Foreground="#FF5B2222" Text="    2.Если появилась точка, то значит вы промахнулись." />
+            <TextBlock TextWrapping="Wrap" Foreground="#FF5B2222" Text="    3.Если появился красный крест с желтым фоном ячейки, значит вы попали в корабль, но не потапили его." />
+            <TextBlock TextWrapping="Wrap" Foreground="#FF5B2222" ><Run Text="    4.Если появился красный крест с красной "/><Run Text="о"/><Run Text="кантовкой, значит вы потапили корабль польностью."/><LineBreak/><Run/></TextBlock>
+            <TextBlock HorizontalAlignment="Center" Foreground="Blue" Margin="115,0,114,0" Text="Основные правила игры."/>
+            <TextBlock TextWrapping="Wrap" Foreground="#FF5B2222"><Run Text="    Атака кораблей противника идет по очереди. Сначала вы, потом компьютер."/><LineBreak/><Run/></TextBlock>
+            <TextBlock HorizontalAlignment="Center" Foreground="Blue" Text="Конец игры."/>
+            <TextBlock TextWrapping="Wrap" Foreground="#FF5B2222" Text="    Игра идет до тех пор, пока вы или компьютер не потопит все корабли противника."/>
+        </StackPanel>
+
+    </Grid>
+</Window>

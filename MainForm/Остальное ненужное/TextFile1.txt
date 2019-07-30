@@ -1,0 +1,448 @@
+﻿
+//екрн
+//df
+
+//ShipsCoordinateRight[ShipsCoordinateRight.IndexOf(PointList)].Remove(Point);
+//ButtonsFieldRight[i,j].Background = new SolidColorBrush(Colors.Red);
+//Image image = new Image();
+//image.Source = new BitmapImage(new Uri(@"E:\SEA BATTLE С#\Sea battle\ЗначокРанен.ico"));
+
+
+
+//}            //foreach (var PointList in ShipsCoordinateRight)
+//foreach (var Point in PointList)
+
+//private void Button1_Click(object sender, RoutedEventArgs e)
+//{
+//    //SetOurShipsOnField();
+//    //foreach (Button x in OurField.Children)
+//    //{
+//    //    x.Background = new SolidColorBrush(Color.FromRgb(255,255,255));
+//    //}
+//    //(("button" + "00") as Button).
+//}
+
+
+//private int GetQuantityButtons()
+//{
+//    ComboBoxItem item = (ComboBoxItem)comboBox1.SelectedItem;
+//    int count = int.Parse((string)item.Content);
+//    return count;
+//}
+
+//private void СreateButton_Click(object sender, RoutedEventArgs e)
+//{
+//    //if (wrapPanel.Children.Count > 0)
+//    //    wrapPanel.Children.Clear();
+//    //int count = 100;
+//    //Button[] buttons = CreateButtons(count, 1);
+//    //AddToWrapPanel(buttons);
+//}
+
+
+
+//DispatcherTimer timer = new DispatcherTimer();
+
+//int remnantBombCount = 10;
+//int sec = 0;
+
+//private void timerTick(object sender, EventArgs e)
+//{
+//    sec++;
+//    seconds.Text = sec.ToString();
+//}
+
+
+//static int num = 0;
+//Timer timer = new Timer(tm, num, 0, 1000);
+//static TimerCallback tm = new TimerCallback(Count);
+
+
+//static Label MyLabel;
+
+//static int i = 0;
+//public static void Count(object Lab)
+//{
+//    i++;
+//    MyLabel.Content = "Время " + i.ToString();
+
+//}
+
+
+
+
+//int num = 0;
+//TimerCallback tm = new TimerCallback(Count);
+//Timer timer = new Timer(tm, num, 0, 1000);
+//MyLabel = TimeLabel;
+
+
+
+//bool correct = true;
+//for (int LengthShip = 4, Count = 1; LengthShip != 0; LengthShip--, Count++)
+//{
+//    for (int CountIn = Count; CountIn > 0; CountIn--)
+//    {
+//        int j, i,Direction;
+//        do
+//        {
+//            correct = true;
+//            Random myRand = new Random();
+//            i = myRand.Next(0, OurFieldMatrix.GetLength(0) - 1);
+//            j = myRand.Next(0, OurFieldMatrix.GetLength(1) - 1);
+//            Direction = myRand.Next(0, 3);// 0 - лево 1 - вверх 2 - вправо 3 - вниз
+//            switch (Direction)
+//            {
+//                case 0:
+//                    if (j - LengthShip >= 0)
+//                    {
+//                        for (int goLeft = 0; goLeft < LengthShip; goLeft++)
+//                        {
+//                            if (OurFieldMatrix[i, j - goLeft] == 1)
+//                            {
+//                                correct = false;
+//                                break;
+//                            }
+//                        }
+//                    }
+//                    else
+//                        correct = false;
+//                    break;
+//                case 1:
+//                    if (i - LengthShip >= 0)
+//                    {
+//                        for (int goUp = 0; goUp < LengthShip; goUp++)
+//                        {
+//                            if (OurFieldMatrix[i - goUp, j] == 1)
+//                            {
+//                                correct = false;
+//                                break;
+//                            }
+//                        }
+//                    }
+//                    else
+//                        correct = false;
+//                    break;
+//                case 2:
+//                    if (j + LengthShip < OurFieldMatrix.GetLength(1))
+//                    {
+//                        for (int goRight = 0; goRight < LengthShip; goRight++)
+//                        {
+//                            if (OurFieldMatrix[i, j + goRight] == 1)
+//                            {
+//                                correct = false;
+//                                break;
+//                            }
+//                        }
+//                    }
+//                    else
+//                        correct = false;
+//                    break;
+//                case 3:
+//                    if (i + LengthShip < OurFieldMatrix.GetLength(0))
+//                    {
+//                        for (int goDown = 0; goDown < LengthShip; goDown++)
+//                        {
+//                            if (OurFieldMatrix[i + goDown, j] == 1)
+//                            {
+//                                correct = false;
+//                                break;
+//                            }
+//                        }
+//                    }
+//                    else
+//                        correct = false;
+//                    break;
+//            }
+
+//        } while (!correct);
+
+//        switch (Direction)
+//        {
+//            case 0:
+//                for (int goLeft = 0; goLeft < LengthShip; goLeft++)
+//                    OurFieldMatrix[i, j - goLeft] = 1;
+//                break;
+//            case 1:
+//                for (int goUp = 0; goUp < LengthShip; goUp++)
+//                    OurFieldMatrix[i - goUp, j] = 1;
+//                break;
+//            case 2:
+//                for (int goRight = 0; goRight < LengthShip; goRight++)
+//                    OurFieldMatrix[i, j + goRight] = 1;
+//                break;
+//            case 3:
+//                for (int goDown = 0; goDown < LengthShip; goDown++)
+//                    OurFieldMatrix[i + goDown, j] = 1;
+//                break;
+
+//        }
+
+//       correct = true;
+
+//    }
+//}
+
+
+
+//private void SetMarginForShip(List<List<Point>> ShipsCoordinate,Button[,] ButtonsField,int[,] ShipsField, int i )
+//{
+//    int shipCoordI, shipCoordJ;// сделать метод для обоих полей
+//    for (int k = 0; k < ShipsCoordinate[i].Count(); k++)
+//    {
+//        shipCoordI = (int)ShipsCoordinate[i][k].X;
+//        shipCoordJ = (int)ShipsCoordinate[i][k].Y;
+//        SetMarginCellOfSinkShip(shipCoordI, shipCoordJ, ButtonsField, ShipsField);
+//        ButtonsField[shipCoordI, shipCoordJ].Background = new SolidColorBrush(Colors.Black);
+//        ButtonsField[shipCoordI, shipCoordJ].IsHitTestVisible = false;
+//    }
+//}
+
+
+//if (NextUserStep == false)
+//    do
+//    {
+
+//        IsInjury = false;
+//        if (StackOfCellsAfterInjury.Count == 0)//если стэк пустой, иначе есть раненый корабль, но не добитый
+//        {
+//            do
+//            {
+//                iRandOfShip = int.Parse(RandCellsMatrix[iFromRandMatrix, jFromRandMatrix].X.ToString());// координата следующего случайного корабля i
+//                jRandOfShip = int.Parse(RandCellsMatrix[iFromRandMatrix, jFromRandMatrix].Y.ToString());//координата следующего случайного корабля j
+//            }
+//            while (ShipsFieldMatrixLeft[iRandOfShip, jRandOfShip] == -1);
+
+//            NextUserStep = true;
+//            if (ShipsFieldMatrixLeft[iRandOfShip, jRandOfShip] == 1)
+//            {
+
+//                for (int i = 0; i < ShipsCoordinateLeft.Count(); i++)
+//                    for (int j = 0; j < ShipsCoordinateLeft[i].Count(); j++)
+//                        if (ShipsCoordinateLeft[i][j].X == iRandOfShip && ShipsCoordinateLeft[i][j].Y == jRandOfShip)
+//                            if (ShipsCoordinateLeft[i].Count > 1)
+//                            {
+//                                ListClosedCellsOfShip.Add(new Point(iRandOfShip, jRandOfShip));
+//                                PushInStackFreeCells(iRandOfShip, jRandOfShip, StackOfCellsAfterInjury);
+//                                ButtonsFieldLeft[iRandOfShip, jRandOfShip].Background = new SolidColorBrush(Colors.Yellow);
+//                                //ShipsCoordinateLeft[i].Remove(new Point(iRandOfShip,jRandOfShip));
+//                                for (int q = 0; q < ShipsCoordinateLeft[i].Count; q++)
+//                                    ListCoordOfInjuredShip.Add(ShipsCoordinateLeft[i][q]);
+
+//                                for (int q = 0; q < ShipsCoordinateLeft[i].Count; q++)
+//                                    if (ShipsCoordinateLeft[i][q].X != iRandOfShip || ShipsCoordinateLeft[i][q].Y != jRandOfShip)
+//                                        ListInjuriedShipForPC.Add(ShipsCoordinateLeft[i][q]);
+
+//                                //ShipsCoordinateLeft[i].Remove(ShipsCoordinateLeft[i][j]);
+//                                //Thread.Sleep(3000);
+
+//                                IsInjury = true;
+//                            }
+//                            else if (ShipsCoordinateLeft[i].Count == 1) //Если корабль сразу убит, то блокируем кнопки вокруг корабля
+//                            {
+//                                IsInjury = true;
+//                                SetMarginForShip(ShipsCoordinateLeft[i], ButtonsFieldLeft, ShipsFieldMatrixLeft);
+//                                SetUnavailableCells(ShipsCoordinateLeft[i], ShipsFieldMatrixLeft);
+
+//                                //ButtonsFieldLeft[int.Parse(ShipsCoordinateLeft[i][0].X.ToString()), int.Parse(ShipsCoordinateLeft[i][0].Y.ToString())].Background = new SolidColorBrush(Colors.Yellow);
+//                            }
+//            }
+//            else
+//            {
+//                ButtonsFieldLeft[iRandOfShip, jRandOfShip].IsEnabled = false;
+//            }
+//        }
+//        else// если стэк не пустой, значит есть непотопленный корабль
+//        {
+//            Point nextShip = StackOfCellsAfterInjury.Pop(); // Берем преполагаемую точку, чтобы добить корабль
+//            int iShipFromStack = int.Parse(nextShip.X.ToString()), jShipFromStack = int.Parse(nextShip.Y.ToString()); //Координаты преполагаемого корабля
+
+
+//            if (ShipsFieldMatrixLeft[iShipFromStack, jShipFromStack] == 1) // Если мы попали в корабль, исходя из матрицы расстановки кораблей
+//            {
+
+
+
+//                ButtonsFieldLeft[iShipFromStack, jShipFromStack].Background = new SolidColorBrush(Colors.Yellow);
+//                for (int i = 0; i < ListInjuriedShipForPC.Count; i++) //Проходим по списку координат точек, которые остались в раненом корабле
+//                    if (ListInjuriedShipForPC[i].X == iShipFromStack && ListInjuriedShipForPC[i].Y == jShipFromStack) //Если попали, то
+//                    {
+//                        //Thread.Sleep(3000);
+//                        ListInjuriedShipForPC.Remove(nextShip); // Удаляем клетку, в которую уже попали из списка оставшихся
+//                        if (ListInjuriedShipForPC.Count == 0) // Если список, оставшихся клеток, пуст, то блокируем клетки на поле пользователя
+//                        {
+//                            SetMarginForShip(ListCoordOfInjuredShip, ButtonsFieldLeft, ShipsFieldMatrixLeft);
+//                            SetUnavailableCells(ListCoordOfInjuredShip, ShipsFieldMatrixLeft);
+//                            ListClosedCellsOfShip.Clear();
+//                            StackOfCellsAfterInjury.Clear();
+//                            IsInjury = true;
+
+//                        }
+//                        else if (ListInjuriedShipForPC.Count > 0) // Если список, оставшихся клеток, не пуст значит корабль состоит более двух клеток
+//                        // и нужно добавлять две клетки в стэк
+//                        {
+//                            ListClosedCellsOfShip.Add(new Point(iShipFromStack, jShipFromStack));
+//                            StackOfCellsAfterInjury.Clear();
+//                            int Count = ListClosedCellsOfShip.Count - 1;
+//                            //double firstX = ListClosedCellsOfShip[0].X, firstY = ListClosedCellsOfShip[0].Y;
+//                            //double secondX = ListClosedCellsOfShip[Count].X, secondY = ListClosedCellsOfShip[Count].Y;
+//                            if (ListClosedCellsOfShip[0].X == ListClosedCellsOfShip[1].X)//Если корабль стоит вертикально
+//                            {
+//                                ListClosedCellsOfShip.Sort(new CompareXY());
+//                                double firstX = ListClosedCellsOfShip[0].X, firstY = ListClosedCellsOfShip[0].Y;
+//                                double secondX = ListClosedCellsOfShip[Count].X, secondY = ListClosedCellsOfShip[Count].Y;
+//                                StackOfCellsAfterInjury.Push(new Point(firstX, firstY - 1));
+//                                StackOfCellsAfterInjury.Push(new Point(secondX, secondY + 1));
+//                                IsInjury = true;
+//                            }
+//                            else if (ListClosedCellsOfShip[0].Y == ListClosedCellsOfShip[1].Y)//Если корабль стоит горизонтально
+//                            {
+//                                ListClosedCellsOfShip.Sort(new CompareXY());
+//                                double firstX = ListClosedCellsOfShip[0].X, firstY = ListClosedCellsOfShip[0].Y;
+//                                double secondX = ListClosedCellsOfShip[Count].X, secondY = ListClosedCellsOfShip[Count].Y;
+
+//                                StackOfCellsAfterInjury.Push(new Point(firstX + 1, firstY));
+//                                //Count = ListClosedCellsOfShip.Count - 1;
+//                                StackOfCellsAfterInjury.Push(new Point(secondX - 1, secondY));
+//                                IsInjury = true;
+//                            }
+
+
+//                        }
+//                        //if (StackOfCellsAfterInjury.Count == 0)
+//                        //{
+//                        //    SetMarginCellOfSinkShip(iShip, jShip, ButtonsFieldLeft, ShipsFieldMatrixLeft);
+//                        //    IsInjury = false;
+//                        //}
+
+//                        //StackOfCellsAfterInjury.Clear();
+
+//                    }
+//                    else //Иначе даем ход пользователю
+//                        IsInjury = false;
+
+
+//            }
+//            else
+//            {
+//                ButtonsFieldLeft[iShipFromStack, jShipFromStack].IsEnabled = false;
+//                //ButtonsFieldLeft[iShipFromStack, jShipFromStack].Background = new SolidColorBrush(GetColor());
+//                IsInjury = false;
+//            }
+//        }
+//        if (StackOfCellsAfterInjury.Count == 0) jFromRandMatrix++;
+//        //CoorI = int.Parse(RandCellsMatrix[iFromRandMatrix, jFromRandMatrix].X.ToString());
+//        //CoorJ = int.Parse(RandCellsMatrix[iFromRandMatrix, jFromRandMatrix].Y.ToString());
+//        if (jFromRandMatrix == CellCountInWidth) { iFromRandMatrix++; jFromRandMatrix = 0; };
+
+
+//    } while (IsInjury);
+
+
+//static private bool IsOtherShipsInCell(int i, int j, int[,] shipsField)
+//{
+
+//    try
+//    {
+//        if (IsCorrectCell())
+//        if (shipsField[i, j] != 0) return true;
+//    }
+//    catch { }
+//    try
+//    {
+//        if (shipsField[i - 1, j - 1] != 0) return true;
+//    }
+//    catch { }
+
+//    try
+//    {
+//        if (shipsField[i - 1, j] != 0) return true;
+//    }
+//    catch { }
+//    try
+//    {
+//        if (shipsField[i - 1, j + 1] != 0) return true;
+//    }
+//    catch { }
+
+//    try
+//    {
+//        if (shipsField[i + 1, j - 1] != 0) return true;
+//    }
+//    catch { }
+//    try
+//    {
+//        if (shipsField[i + 1, j] != 0) return true;
+//    }
+//    catch { }
+//    try
+//    {
+//        if (shipsField[i + 1, j + 1] != 0) return true;
+//    }
+//    catch { }
+//    try
+//    {
+//        if (shipsField[i, j - 1] != 0) return true;
+//    }
+//    catch { }
+//    try
+//    {
+//        if (shipsField[i, j + 1] != 0) return true;
+//    }
+//    catch { }
+
+//    return false;
+//}
+
+
+//static void SetMarginCellOfSinkShip(int i, int j, Button[,] buttons, int[,] ShipsField)
+//{
+//    try
+//    {
+//        if (ShipsField[i, j] == 0) buttons[i - 1, j - 1].IsEnabled = false;
+//    }
+//    catch { }
+
+//    try
+//    {
+//        if (ShipsField[i - 1, j - 1] == 0) buttons[i - 1, j - 1].IsEnabled = false;
+//    }
+//    catch { }
+
+//    try
+//    {
+//        if (ShipsField[i - 1, j] == 0) buttons[i - 1, j].IsEnabled = false; ;
+//    }
+//    catch { }
+//    try
+//    {
+//        if (ShipsField[i - 1, j + 1] == 0) buttons[i - 1, j + 1].IsEnabled = false; ;
+//    }
+//    catch { }
+
+//    try
+//    {
+//        if (ShipsField[i + 1, j - 1] == 0) buttons[i + 1, j - 1].IsEnabled = false; ;
+//    }
+//    catch { }
+//    try
+//    {
+//        if (ShipsField[i + 1, j] == 0) buttons[i + 1, j].IsEnabled = false; ;
+//    }
+//    catch { }
+//    try
+//    {
+//        if (ShipsField[i + 1, j + 1] == 0) buttons[i + 1, j + 1].IsEnabled = false; ;
+//    }
+//    catch { }
+//    try
+//    {
+//        if (ShipsField[i, j - 1] == 0) buttons[i, j - 1].IsEnabled = false; ;
+//    }
+//    catch { }
+//    try
+//    {
+//        if (ShipsField[i, j + 1] == 0) buttons[i, j + 1].IsEnabled = false; ;
+//    }
+//    catch { }
+//}// Только для правого поля
